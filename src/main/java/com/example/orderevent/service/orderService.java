@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class OrderService {
+public class orderService {
 
     @Autowired
     private OrderRepository orderRepository;

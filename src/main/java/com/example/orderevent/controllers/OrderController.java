@@ -5,7 +5,8 @@ import com.example.orderevent.entity.Product;
 import com.example.orderevent.event.OrderCreatedEvent;
 import com.example.orderevent.repository.OrderRepository;
 import com.example.orderevent.repository.ProductRepository;
-import com.example.orderevent.service.OrderService;
+import com.example.orderevent.service.orderService;
+import com.example.orderevent.service.orderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.http.HttpStatus;
@@ -22,12 +23,12 @@ import java.util.List;
 public class OrderController {
 
     @Autowired
-    private OrderService orderService;
+    private orderService OrderService;
 
     @PostMapping
     public ResponseEntity<String> createOrder(@RequestBody Order order) {
         // Delegar la creación de la orden al servicio
-        orderService.createOrder(order);
+        OrderService.createOrder(order);
         return ResponseEntity.status(HttpStatus.CREATED).body("Order created successfully");
     }
 }
