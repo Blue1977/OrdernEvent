@@ -21,9 +21,9 @@ public class InventoryUpdateListener {
             if (product.getStock() > 0) {
                 product.setStock(product.getStock() - 1);
                 productRepository.save(product);
-                logger.info("Reduced stock for {}. Remaining stock: {}", product.getName(), product.getStock());
+                logger.info("Stock reducido {}. Stock disponible: {}", product.getName(), product.getStock());
             } else {
-                logger.warn("Product {} is out of stock!", product.getName());
+                logger.warn("Producto {} fuera de stock", product.getName());
             }
         }
     }

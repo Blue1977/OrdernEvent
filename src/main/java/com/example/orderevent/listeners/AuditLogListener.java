@@ -13,6 +13,6 @@ public class AuditLogListener {
     @EventListener
     public void onOrderCreated(OrderCreatedEvent event) {
         var order = event.getOrder();
-        logger.info("Recording audit log for order {} with products {}", order.getId(), order.getProducts());
+        logger.info("Grabando audit para orden {} con productos {}", order.getId(), order.getProducts());
     }
 }

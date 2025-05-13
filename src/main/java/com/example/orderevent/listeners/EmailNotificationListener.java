@@ -13,7 +13,7 @@ public class EmailNotificationListener {
     @EventListener
     public void onOrderCreated(OrderCreatedEvent event) {
         var order = event.getOrder();
-        logger.info("Sending confirmation email to {} for order {} with products {}", order.getEmail(), order.getId(), order.getProducts());
+        logger.info("Enviando email de confirmación a {} paar orden {} con productos {}", order.getEmail(), order.getId(), order.getProducts());
     }
 }
 
